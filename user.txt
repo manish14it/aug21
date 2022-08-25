@@ -1,0 +1,36 @@
+Following is the user creation script.
+
+ 
+
+/as sysdba
+create user vaaan identified by vaarid789 account unlock;
+grant connect, resource, dba to vaaan;
+alter profile default limit password_life_time unlimited;
+
+commit;
+conn;
+vaaan/vaarid789
+
+CREATE TABLESPACE INDX
+    LOGGING
+    DATAFILE 'D:\app\oracle\oradata\XE\INDX01.DBF' SIZE 1024M
+    AUTOEXTEND
+    ON NEXT  500M MAXSIZE  1500M EXTENT MANAGEMENT LOCAL
+    SEGMENT SPACE MANAGEMENT AUTO;
+-----------------------------------------------------------------------------
+jmc reva
+-----------
+/as sysdba
+alter user vaaan identified by vaaanjmc1032;
+commit;
+
+
+3v+AyABUWZEikghf2cmxzw==
+vaaanjmc1032
+-------------------------------------------------------------------------------------
+
+alter user vaaan account unlock;
+
+alter profile default limit password_life_time unlimited;
+
+alter user vaaan identified by vaarid789 account unlock;
